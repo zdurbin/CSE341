@@ -1,0 +1,36 @@
+// LOCALHOST ### 
+GET http://localhost:3000/contacts 
+### 
+GET http://localhost:3000/contacts/626c55bc4ed143d8810abea3
+### 
+GET http://localhost:3000/contacts/626c55bc4ed143d8810abea4 
+### 
+GET http://localhost:3000/contacts/626c55bc4ed143d8810abea5
+
+### Create contact 
+POST http://localhost:3000/contacts HTTP/1.1 
+content-type: application/json
+
+{
+"firstName":"Ashley", 
+"lastName":"Weaver", 
+"email":"aWeaver@test.com", 
+"favoriteColor":"Brown", 
+"birthday":"06/19/2000"
+}
+
+### PUT contact 
+PUT http://localhost:3000/contacts/626c55bc4ed143d8810abea3 HTTP/1.1 
+content-type: application/json
+
+{
+"firstName":"Sarah", 
+"lastName":"Durbin", 
+"email":"test@gmail.com", 
+"favoriteColor":"Green", 
+"birthday":"12/12/20"
+}
+
+### DELETE contact 
+DELETE http://localhost:3000/contacts/6220b775099269ff7b31ceab HTTP/1.1
+
